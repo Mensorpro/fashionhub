@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAISON — Curated Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- CURSOR -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- LOADER / ENTRANCE -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-line"></span>
+      <p class="loader-text">Entering the Atelier</p>
+      <span class="loader-line"></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">MAISON</a>
+    <div class="nav-links">
+      <a href="#collections" class="nav-link">Collections</a>
+      <a href="#atelier" class="nav-link">Atelier</a>
+      <a href="#order" class="nav-link">Inquire</a>
+    </div>
+    <button class="cart-btn" id="cartBtn">
+      Bag <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="menu-toggle" id="menuToggle">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#collections" class="mobile-link">Collections</a>
+    <a href="#atelier" class="mobile-link">Atelier</a>
+    <a href="#order" class="mobile-link">Inquire</a>
+  </div>
+
+  <!-- HERO — ACT I -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-subtitle reveal">Est. 2024 — Handcrafted Fashion</p>
+      <h1 class="hero-title">
+        <span class="title-line reveal">Where Fabric</span>
+        <span class="title-line reveal">Becomes Art</span>
+      </h1>
+      <p class="hero-desc reveal">A curated journey through texture, form, and the poetry of dress.</p>
+      <a href="#collections" class="hero-cta reveal">
+        <span>Begin the Journey</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY — ACT II -->
+  <section class="philosophy" id="philosophy">
+    <div class="section-number reveal">01</div>
+    <div class="philosophy-grid">
+      <div class="philosophy-image reveal">
+        <div class="img-placeholder" data-label="The Artisan">
+          <img src="https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f?w=800&h=1000&fit=crop&q=80" alt="Fashion artisan at work" loading="lazy" />
+        </div>
+      </div>
+      <div class="philosophy-text">
+        <h2 class="section-heading reveal">Every Stitch<br />Tells a Story</h2>
+        <p class="section-body reveal">
+          Each piece in our collection is a conversation between tradition and tomorrow. 
+          We believe fashion is not just worn — it is experienced. Every garment is 
+          handcrafted with intention, designed to make you feel like a living work of art.
+        </p>
+        <p class="section-body reveal">
+          From the first sketch to the final thread, each creation carries the warmth 
+          of hands that care deeply about beauty, comfort, and the quiet confidence 
+          that comes from wearing something truly unique.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS — ACT III -->
+  <section class="collections" id="collections">
+    <div class="section-number reveal">02</div>
+    <div class="collections-header">
+      <h2 class="section-heading reveal">The Collection</h2>
+      <p class="section-body reveal">Scroll through our gallery — each piece awaits your discovery.</p>
+    </div>
+
+    <!-- HORIZONTAL GALLERY -->
+    <div class="gallery-wrapper">
+      <div class="gallery-track" id="galleryTrack">
+
+        <div class="gallery-card" data-name="Sable Evening Drape" data-price="320" data-id="1">
+          <div class="card-image">
+            <div class="img-placeholder dark" data-label="Sable Evening Drape">
+              <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=900&fit=crop&q=80" alt="Sable Evening Drape" loading="lazy" />
+            </div>
+            <div class="card-overlay">
+              <button class="quick-view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Sable Evening Drape</h3>
+            <p>$320</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-name="Ivory Linen Ensemble" data-price="275" data-id="2">
+          <div class="card-image">
+            <div class="img-placeholder warm" data-label="Ivory Linen Ensemble">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=900&fit=crop&q=80" alt="Ivory Linen Ensemble" loading="lazy" />
+            </div>
+            <div class="card-overlay">
+              <button class="quick-view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Ivory Linen Ensemble</h3>
+            <p>$275</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-name="Midnight Silk Coat" data-price="410" data-id="3">
+          <div class="card-image">
+            <div class="img-placeholder cool" data-label="Midnight Silk Coat">
+              <img src="https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&h=900&fit=crop&q=80" alt="Midnight Silk Coat" loading="lazy" />
+            </div>
+            <div class="card-overlay">
+              <button class="quick-view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Midnight Silk Coat</h3>
+            <p>$410</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-name="Terracotta Wrap Dress" data-price="290" data-id="4">
+          <div class="card-image">
+            <div class="img-placeholder earth" data-label="Terracotta Wrap Dress">
+              <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&h=900&fit=crop&q=80" alt="Terracotta Wrap Dress" loading="lazy" />
+            </div>
+            <div class="card-overlay">
+              <button class="quick-view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Terracotta Wrap Dress</h3>
+            <p>$290</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-name="Cloud Cashmere Shawl" data-price="185" data-id="5">
+          <div class="card-image">
+            <div class="img-placeholder light" data-label="Cloud Cashmere Shawl">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=900&fit=crop&q=80" alt="Cloud Cashmere Shawl" loading="lazy" />
+            </div>
+            <div class="card-overlay">
+              <button class="quick-view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Cloud Cashmere Shawl</h3>
+            <p>$185</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-name="Obsidian Tailored Blazer" data-price="365" data-id="6">
+          <div class="card-image">
+            <div class="img-placeholder dark" data-label="Obsidian Tailored Blazer">
+              <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&h=900&fit=crop&q=80" alt="Obsidian Tailored Blazer" loading="lazy" />
+            </div>
+            <div class="card-overlay">
+              <button class="quick-view-btn">View Details</button>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Obsidian Tailored Blazer</h3>
+            <p>$365</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="gallery-nav">
+      <button class="gallery-arrow left" id="galleryLeft">←</button>
+      <div class="gallery-progress">
+        <div class="gallery-progress-bar" id="galleryProgress"></div>
+      </div>
+      <button class="gallery-arrow right" id="galleryRight">→</button>
+    </div>
+  </section>
+
+  <!-- PIECE DETAIL MODAL -->
+  <div class="modal" id="pieceModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-grid">
+        <div class="modal-image">
+          <div class="img-placeholder" id="modalImage" data-label="">
+            <img id="modalImg" src="" alt="" />
+          </div>
+        </div>
+        <div class="modal-details">
+          <h2 class="modal-title" id="modalTitle"></h2>
+          <p class="modal-price" id="modalPrice"></p>
+          <p class="modal-desc">
+            A signature piece crafted from premium fabrics, designed to drape 
+            beautifully and move with effortless grace. Each garment is made to order, 
+            ensuring a perfect expression of individuality.
+          </p>
+          <div class="modal-options">
+            <label class="option-label">Size</label>
+            <div class="size-options" id="sizeOptions">
+              <button class="size-btn" data-size="XS">XS</button>
+              <button class="size-btn" data-size="S">S</button>
+              <button class="size-btn active" data-size="M">M</button>
+              <button class="size-btn" data-size="L">L</button>
+              <button class="size-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+          <button class="add-to-bag" id="addToBag">Add to Bag</button>
+          <p class="modal-note">Made to order — Ships in 2-3 weeks</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Handcrafted with Love</span>
+        <span>✦</span>
+        <span>One of a Kind</span>
+        <span>✦</span>
+        <span>Timeless Elegance</span>
+        <span>✦</span>
+        <span>Made to Order</span>
+        <span>✦</span>
+        <span>Wearable Art</span>
+        <span>✦</span>
+        <span>Handcrafted with Love</span>
+        <span>✦</span>
+        <span>One of a Kind</span>
+        <span>✦</span>
+        <span>Timeless Elegance</span>
+        <span>✦</span>
+        <span>Made to Order</span>
+        <span>✦</span>
+        <span>Wearable Art</span>
+        <span>✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATELIER / BEHIND THE SCENES — ACT IV -->
+  <section class="atelier" id="atelier">
+    <div class="section-number reveal">03</div>
+    <div class="atelier-header">
+      <h2 class="section-heading reveal">The Atelier</h2>
+      <p class="section-body reveal">Behind every garment is a world of craft, care, and creativity.</p>
+    </div>
+    <div class="atelier-grid">
+      <div class="atelier-item reveal">
+        <div class="img-placeholder warm tall" data-label="Selecting Fabrics">
+          <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&h=800&fit=crop&q=80" alt="Selecting fabrics" loading="lazy" />
+        </div>
+        <p>Selecting the finest fabrics</p>
+      </div>
+      <div class="atelier-item reveal">
+        <div class="img-placeholder cool" data-label="Sketching Designs">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=600&fit=crop&crop=top&q=80" alt="Sketching designs by hand" loading="lazy" />
+        </div>
+        <p>Sketching each design by hand</p>
+      </div>
+      <div class="atelier-item reveal">
+        <div class="img-placeholder earth tall" data-label="Sewing & Assembly">
+          <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=800&fit=crop&q=80" alt="Sewing and assembly" loading="lazy" />
+        </div>
+        <p>Meticulous sewing & assembly</p>
+      </div>
+      <div class="atelier-item reveal">
+        <div class="img-placeholder light" data-label="Final Touches">
+          <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&h=600&fit=crop&q=80" alt="Final finishing touches" loading="lazy" />
+        </div>
+        <p>The final, finishing touches</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS — ACT V -->
+  <section class="testimonials">
+    <div class="section-number reveal">04</div>
+    <div class="testimonials-slider" id="testimonialSlider">
+      <div class="testimonial active">
+        <blockquote class="reveal">
+          "Wearing her designs feels like stepping into a painting. 
+          Every piece is a love letter to craftsmanship."
+        </blockquote>
+        <cite class="reveal">— Amara K., Lagos</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "The attention to detail is extraordinary. I've never felt 
+          more beautiful or more myself."
+        </blockquote>
+        <cite>— Sophie M., Paris</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "More than fashion — it's an experience. 
+          Each garment tells its own story."
+        </blockquote>
+        <cite>— Diana R., New York</cite>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonialDots">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+  </section>
+
+  <!-- ORDER / INQUIRE — ACT VI -->
+  <section class="order-section" id="order">
+    <div class="section-number reveal">05</div>
+    <div class="order-grid">
+      <div class="order-text">
+        <h2 class="section-heading reveal">Place Your<br />Order</h2>
+        <p class="section-body reveal">
+          Every piece is made to order. Share your vision and we'll craft 
+          something extraordinary — just for you.
+        </p>
+      </div>
+      <form class="order-form" id="orderForm">
+        <div class="form-group reveal">
+          <label>Name</label>
+          <input type="text" name="name" required placeholder="Your full name" />
+        </div>
+        <div class="form-row">
+          <div class="form-group reveal">
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="your@email.com" />
+          </div>
+          <div class="form-group reveal">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="+1 (555) 000-0000" />
+          </div>
+        </div>
+        <div class="form-group reveal">
+          <label>What are you looking for?</label>
+          <select name="interest">
+            <option value="">Select a category</option>
+            <option value="evening">Evening Wear</option>
+            <option value="casual">Casual Elegance</option>
+            <option value="outerwear">Outerwear</option>
+            <option value="accessories">Accessories</option>
+            <option value="custom">Fully Custom Piece</option>
+          </select>
+        </div>
+        <div class="form-group reveal">
+          <label>Your Vision</label>
+          <textarea name="message" rows="4" placeholder="Tell us about your dream piece, occasion, or any special requests..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn reveal">
+          <span>Send Inquiry</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your bag is empty</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <a href="#order" class="checkout-btn" id="checkoutBtn">Proceed to Order</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- SUCCESS TOAST -->
+  <div class="toast" id="toast">
+    <span id="toastMsg">Added to bag</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>MAISON</h2>
+        <p>Curated fashion, crafted with soul.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#collections">Collections</a>
+        <a href="#atelier">Atelier</a>
+        <a href="#order">Inquire</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Pinterest">Pinterest</a>
+        <a href="#" aria-label="Email">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 MAISON. All rights reserved. Made with ♥</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
