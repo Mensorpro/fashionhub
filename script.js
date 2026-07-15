@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
     $('#loader').classList.add('hidden');
     document.body.style.overflow = '';
     initReveal();
-  }, 1800);
+  }, 900);
 });
 
 // ── CUSTOM CURSOR ──
@@ -80,12 +80,17 @@ const mobileMenu = $('#mobileMenu');
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
   mobileMenu.classList.toggle('open');
+  const isOpen = mobileMenu.classList.contains('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 });
 
 $$('.mobile-link').forEach(link => {
   link.addEventListener('click', () => {
     menuToggle.classList.remove('active');
     mobileMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open menu');
   });
 });
 
@@ -227,6 +232,7 @@ $$('.quick-view-btn').forEach(btn => {
     modalContainer.dataset.label = name;
 
     modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   });
 });
@@ -236,6 +242,7 @@ $('.modal-backdrop').addEventListener('click', closeModal);
 
 function closeModal() {
   modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
 }
 
@@ -268,6 +275,7 @@ $('#addToBag').addEventListener('click', () => {
 function updateCart() {
   const count = state.cart.length;
   $('#cartCount').textContent = count;
+  $('#cartBtn').setAttribute('aria-label', `Open shopping bag with ${count} ${count === 1 ? 'item' : 'items'}`);
   
   const cartItems = $('#cartItems');
   const cartFooter = $('#cartFooter');
@@ -318,6 +326,7 @@ window.removeFromCart = function(uid) {
 // Cart sidebar toggle
 $('#cartBtn').addEventListener('click', () => {
   $('#cartSidebar').classList.add('open');
+  $('#cartSidebar').setAttribute('aria-hidden', 'false');
   $('#cartOverlay').classList.add('open');
 });
 
@@ -326,6 +335,7 @@ $('#cartOverlay').addEventListener('click', closeCart);
 
 function closeCart() {
   $('#cartSidebar').classList.remove('open');
+  $('#cartSidebar').setAttribute('aria-hidden', 'true');
   $('#cartOverlay').classList.remove('open');
 }
 
@@ -418,6 +428,8 @@ document.addEventListener('keydown', (e) => {
     if (mobileMenu.classList.contains('open')) {
       menuToggle.classList.remove('active');
       mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open menu');
     }
   }
 });

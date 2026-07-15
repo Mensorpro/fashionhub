@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a class="skip-link" href="#mainContent">Skip to content</a>
+
   <!-- CURSOR -->
   <div class="custom-cursor"></div>
   <div class="cursor-follower"></div>
@@ -24,17 +26,17 @@
   </div>
 
   <!-- NAVIGATION -->
-  <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">MAISON</a>
+  <nav class="nav" id="nav" aria-label="Primary navigation">
+    <a href="#hero" class="nav-logo" aria-label="MAISON home">MAISON</a>
     <div class="nav-links">
       <a href="#collections" class="nav-link">Collections</a>
       <a href="#atelier" class="nav-link">Atelier</a>
       <a href="#order" class="nav-link">Inquire</a>
     </div>
-    <button class="cart-btn" id="cartBtn">
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="Open shopping bag">
       Bag <span class="cart-count" id="cartCount">0</span>
     </button>
-    <button class="menu-toggle" id="menuToggle">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
       <span></span><span></span>
     </button>
   </nav>
@@ -47,23 +49,43 @@
   </div>
 
   <!-- HERO — ACT I -->
+  <main id="mainContent">
   <section class="hero" id="hero">
     <div class="hero-bg">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-subtitle reveal">Est. 2024 — Handcrafted Fashion</p>
+      <p class="hero-subtitle reveal">Private atelier · Made to order</p>
       <h1 class="hero-title">
         <span class="title-line reveal">Where Fabric</span>
         <span class="title-line reveal">Becomes Art</span>
       </h1>
       <p class="hero-desc reveal">A curated journey through texture, form, and the poetry of dress.</p>
-      <a href="#collections" class="hero-cta reveal">
-        <span>Begin the Journey</span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
-      </a>
+      <div class="hero-actions reveal">
+        <a href="#collections" class="hero-cta">
+          <span>Explore the Collection</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#atelier" class="hero-text-link">Discover our craft</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal" aria-label="Featured Terracotta Wrap Dress">
+      <div class="hero-image-wrap">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1100&h=1400&fit=crop&q=85" alt="Model wearing a flowing editorial fashion look" />
+      </div>
+      <div class="hero-piece-meta">
+        <span>Edition 04</span>
+        <strong>Terracotta Wrap</strong>
+        <span>$290</span>
+      </div>
+      <span class="hero-vertical-label">The 2026 Collection</span>
+    </div>
+    <div class="hero-notes" aria-label="Collection highlights">
+      <span>Small-batch craft</span>
+      <span>Natural textiles</span>
+      <span>Worldwide inquiry</span>
     </div>
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
@@ -210,10 +232,10 @@
   </section>
 
   <!-- PIECE DETAIL MODAL -->
-  <div class="modal" id="pieceModal">
+  <div class="modal" id="pieceModal" role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true">
     <div class="modal-backdrop"></div>
     <div class="modal-content">
-      <button class="modal-close" id="modalClose">✕</button>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close product details">✕</button>
       <div class="modal-grid">
         <div class="modal-image">
           <div class="img-placeholder" id="modalImage" data-label="">
@@ -391,12 +413,13 @@
       </form>
     </div>
   </section>
+  </main>
 
   <!-- CART SIDEBAR -->
-  <div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-sidebar" id="cartSidebar" role="dialog" aria-modal="true" aria-label="Shopping bag" aria-hidden="true">
     <div class="cart-header">
       <h3>Your Bag</h3>
-      <button class="cart-close" id="cartClose">✕</button>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Close shopping bag">✕</button>
     </div>
     <div class="cart-items" id="cartItems">
       <p class="cart-empty">Your bag is empty</p>
@@ -412,7 +435,7 @@
   <div class="cart-overlay" id="cartOverlay"></div>
 
   <!-- SUCCESS TOAST -->
-  <div class="toast" id="toast">
+  <div class="toast" id="toast" role="status" aria-live="polite">
     <span id="toastMsg">Added to bag</span>
   </div>
 
